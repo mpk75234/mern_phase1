@@ -1,0 +1,25 @@
+{
+  "name": "react_express",
+  "version": "1.0.0",
+  "description": "build MERN by hand, with Traversy Media!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "first",
+    "premiere",
+    "primero"
+  ],
+  "author": "Brad Traversy",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "mongoose": "^5.0.6"
+  }
+}

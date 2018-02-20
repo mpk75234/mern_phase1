@@ -1,0 +1,18 @@
+h2 {
+    text-align: center;
+    color: orangered;
+    background-color: #eee;
+}
+li{
+    text-align: center;
+    color: orangered;
+    background-color: #eee;
+    list-style: none;
+}
+li:hover {
+    color: green;
+    cusror: pointer;
+}
+    
+    
+    
