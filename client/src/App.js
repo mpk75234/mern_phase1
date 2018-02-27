@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter, Route, Link, NavLink } from 'react-router-dom';
 import Customers from './components/Customers/Customers';
+import Create from './components/Create/Create';
 
 class App extends Component {
-  render() {
+
+  render(){
+  const routes = (
+
+    <BrowserRouter>
+    <div>
+      <Route path="/create" component={Create}/>
+      <Route path="/customers" component={Create}/>
+      </div>
+    </BrowserRouter>
+  )
     return (
-      <div>
+      <div> 
+        {routes}
+        <Create/>
         <Customers />
       </div>
     );
