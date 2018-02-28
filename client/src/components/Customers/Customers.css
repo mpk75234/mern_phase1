@@ -8,10 +8,10 @@ li{
     color: orangered;
     background-color: #eee;
     list-style: none;
+    cursor: pointer;
 }
 li:hover {
     color: green;
-    cusror: pointer;
 }
     
     

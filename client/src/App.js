@@ -11,15 +11,13 @@ class App extends Component {
     <BrowserRouter>
     <div>
       <Route path="/create" component={Create}/>
-      <Route path="/customers" component={Create}/>
+      <Route path="/customers" component={Customers}/>
       </div>
     </BrowserRouter>
   )
     return (
       <div> 
         {routes}
-        <Create/>
-        <Customers />
       </div>
     );
   }
