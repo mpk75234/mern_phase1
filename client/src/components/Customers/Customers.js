@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import classes from './Customers.css';
+import { Link } from 'react-router-dom';
+import Customer from './Customer/Customer';
 
 class Customers extends Component {
    constructor(){
        super();
        this.state = {
            customers: []
-           }
+        }
    } 
 
    componentDidMount() {
@@ -15,25 +17,18 @@ class Customers extends Component {
        .then(customers => this.setState({customers},
         ()=> console.log('Customers fetched: ' + customers)));
    }
-   getCustomerHandler(id){
-       console.log('getCustomerHandler fired using: '+ id );
-       fetch('/api/customers/' + id,{
-           method: 'DELETE',
-           headers: {'Content-Type': 'application/json',
-           'Accept': 'application/json'
-       },
-   })
-   .then(res => res.json());
-}
 
 
     render(){
         const allCustomers = this.state.customers.map(customer =>{
-                    return <li className={classes.li} key={customer._id}>customer {customer._id} is 
-                    {customer.firstname} {customer.lastname}<button 
-                    onClick={()=>this.getCustomerHandler(customer._id)}>Delete</button>
-                    </li>
-                });
+                    return (<Link to={'/customer/' + customer._id} key={customer._id}>
+                    <Customer className={classes.li} 
+                    _id={customer._id} 
+                    firstname={customer.firstname} 
+                    lastname={customer.lastname}
+                    />
+        </Link>)});
+        
         return(
             <div>
             <h2 className={classes.h2}>hello from Customers component</h2>
