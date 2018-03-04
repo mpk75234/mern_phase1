@@ -1,0 +1,16 @@
+header {
+    border-bottom: 2px solid black;
+}
+nav {
+    background-color: lightgreen;
+
+}
+
+a {
+    text-decoration: none;
+    padding: 2px;
+}
+
+a:hover {
+    color: blue;
+}

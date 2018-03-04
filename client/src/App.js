@@ -11,6 +11,12 @@ class App extends Component {
   render(){
   const routes = (
     <div>
+      <header>
+        <nav>
+          <NavLink to="/customers">Customers</NavLink>
+          <NavLink to="/create">CreateCustomer</NavLink>
+          </nav>
+          </header>
       <Route path="/create" exact component={Create}/>
       <Route path="/customers" exact component={Customers}/>
       <Route path="/customer/:id" exact component={CustomerDetail}/>
@@ -18,15 +24,6 @@ class App extends Component {
   )
     return (
       <div className={classes.App}>
-        <header>
-          <nav>
-            <ul> 
-              <li><a href='/customers'>All Customers</a></li>
-              <li><a href='/create'>Add Customer</a></li>
-              <li><a href='/customer/:id'>Update Customer</a></li>
-              </ul>
-              </nav>
-              </header>
       <BrowserRouter>
         {routes}
         </BrowserRouter>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class CustomerDetail extends Component{
     constructor(props){
@@ -6,7 +7,7 @@ class CustomerDetail extends Component{
     this.state = {
         _id: '',
         firstname: '',
-        lastname: ''
+        lastname: '',
     }
 }
 
@@ -22,6 +23,7 @@ class CustomerDetail extends Component{
         })
 
         )}
+
         deleteHandler = () => {
             fetch('/api/customers/' + this.state._id,{
                 method: 'DELETE',
@@ -58,7 +60,7 @@ class CustomerDetail extends Component{
                  lastname:
                  </label>
                 <input type="text" placeholder={this.state.lastname}
-                onChange={(event)=>this.setState({firstname: event.target.value})}
+                onChange={(event)=>this.setState({lastname: event.target.value})}
                 />
                 <br/>
                 <button onClick={this.updateHandler}> Update</button>
@@ -67,7 +69,7 @@ class CustomerDetail extends Component{
 
         return (
             <div>
-                <p> hello from CustomerDetail component</p>
+                <p>Update customer information, or delete customer</p>
                 {customerDetail}
                 </div>
         );

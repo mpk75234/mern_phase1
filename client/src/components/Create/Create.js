@@ -27,7 +27,7 @@ render( ){
 
     return(
         <div>
-            <h3>Hellloooo from Create Component</h3>
+            <h3>Add a customer.</h3>
         <label>
             firstname:
             <input type="text" 
